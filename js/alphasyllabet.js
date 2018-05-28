@@ -2,7 +2,7 @@ function toAlphabet() {
     var str = document.transformation.textinuk.value;
 
     var txt = str.replace(/ᖕᖐ/gmi, "nngii");
-    txt = str.replace(/ᙲ/gmi, "nngii");
+    txt = txt.replace(/ᙲ/gmi, "nngii");
     txt = txt.replace(/ᖕᖒ/gmi, "nnguu");
     txt = txt.replace(/ᙴ/gmi, "nnguu");
     txt = txt.replace(/ᖕᖔ/gmi, "nngaa");
