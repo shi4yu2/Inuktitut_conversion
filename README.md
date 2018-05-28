@@ -8,4 +8,4 @@ Conversion between inuktitut syllabics and alphabet
 
 # ToDo
 
-[  ] Simple voice synthesis for inuktitut words pronunciation.
+- [ ] Simple voice synthesis for inuktitut words pronunciation.
