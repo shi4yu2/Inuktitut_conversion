@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Conversion of text between Inuktitut syllabary and alphabet">
+    <meta name="Keywords" content="conversion,inuktitut,alphabet,syllabary,qaniujaaqpait">
+    <title>Inuktitut Alphasyllabet</title>
+    <script src="./js/alphasyllabet.js"></script>
+    <link rel="stylesheet" href="./css/pure-min.css">
+    <link rel="stylesheet" href="./css/side-menu.css">
+    <link rel="stylesheet" href="./css/shy.css">
+</head>
+
+<body>
+    <div id="layout">
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#">Inuktitut</a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="#conversion" class="pure-menu-link">Conversion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="header">
+                <h2>Inuktitut Alphabet &lt;=&gt; Syllabary Conversion</h2>
+            </div>
+            <div class="content" id="conversion">
+                <noscript>
+                    <span class="span-red">Warning! JavaScript is disabled, the functionality of this page is not available.</span>
+                    <br> JavaScript must be activated in your web browser: Please consult <a class="ext" href="http://www.enable-javascript.com/" target="_blank">for instructions</a>.
+                    <br>
+                    <br>
+                </noscript>
+                <br>
+                <form name="transformation" class="pure-form">
+                    <table class="pure-table">
+                        <thead>
+                            <tr>
+                                <td align="center">
+                                    Alphabet
+                                </td>
+                                <td align="center">
+                                    Syllabary ᖃᓂᐅᔮᖅᐸᐃᑦ
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <textarea name="textlatin" onKeyUp="toSyllabary()" style="width:400px; height:300px;"></textarea>
+                                </td>
+                                <td>
+                                    <textarea name="textinuk" onKeyUp="toAlphabet()" style="width:400px; height:300px;"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1-1" align="center">
+                    <table>
+                        <tr align="center">
+                            <td>p</td>
+                            <td>t</td>
+                            <td>k</td>
+                            <td>g</td>
+                            <td>m</td>
+                            <td>n</td>
+                            <td>s</td>
+                            <td>l</td>
+                            <td>j</td>
+                            <td>v</td>
+                            <td>r</td>
+                            <td>q</td>
+                            <td>ng</td>
+                            <td>nng</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>ai</td>
+                            <td>pai</td>
+                            <td>tai</td>
+                            <td>kai</td>
+                            <td>gai</td>
+                            <td>mai</td>
+                            <td>nai</td>
+                            <td>sai</td>
+                            <td>lai</td>
+                            <td>jai</td>
+                            <td>vai</td>
+                            <td>rai</td>
+                            <td>qai</td>
+                            <td>ngai</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑉ')" value="ᑉ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑦ')" value="ᑦ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒃ')" value="ᒃ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒡ')" value="ᒡ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒻ')" value="ᒻ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓐ')" value="ᓐ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔅ')" value="ᔅ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓪ')" value="ᓪ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔾ')" value="ᔾ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕝ')" value="ᕝ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕐ')" value="ᕐ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖅ')" value="ᖅ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖕ')" value="ᖕ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖖ')" value="ᖖ">
+                            </td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐁ')" value="ᐁ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐯ')" value="ᐯ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑌ')" value="ᑌ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑫ')" value="ᑫ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒉ')" value="ᒉ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒣ')" value="ᒣ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓀ')" value="ᓀ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓭ')" value="ᓭ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓓ')" value="ᓓ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔦ')" value="ᔦ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕓ')" value="ᕓ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕃ')" value="ᕃ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᙯ')" value="ᙯ">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᙰ')" value="ᙰ">
+                            </td>
+                        </tr>
+                    </table><br>
+                    <table>
+                        <tr align="center">
+                            <td>i</td>
+                            <td></td>
+                            <td>pi</td>
+                            <td></td>
+                            <td>ti</td>
+                            <td></td>
+                            <td>ki</td>
+                            <td></td>
+                            <td>gi</td>
+                            <td></td>
+                            <td>mi</td>
+                            <td></td>
+                            <td>ni</td>
+                            <td></td>
+                            <td>si</td>
+                            <td></td>
+                            <td>li</td>
+                            <td></td>
+                            <td>ji</td>
+                            <td></td>
+                            <td>vi</td>
+                            <td></td>
+                            <td>ri</td>
+                            <td></td>
+                            <td>qi</td>
+                            <td></td>
+                            <td>ngi</td>
+                            <td></td>
+                            <td>nngi</td>
+                            <td></td>
+                        </tr>
+                        <tr align="center">
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐃ')" value="ᐃ">
+                            </td>
+                            <td>ii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐱ')" value="ᐱ">
+                            </td>
+                            <td>pii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑎ')" value="ᑎ">
+                            </td>
+                            <td>tii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑭ')" value="ᑭ">
+                            </td>
+                            <td>kii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒋ')" value="ᒋ">
+                            </td>
+                            <td>gii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒥ')" value="ᒥ">
+                            </td>
+                            <td>mii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓂ')" value="ᓂ">
+                            </td>
+                            <td>nii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓯ')" value="ᓯ">
+                            </td>
+                            <td>sii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓕ')" value="ᓕ">
+                            </td>
+                            <td>lii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔨ')" value="ᔨ">
+                            </td>
+                            <td>jii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕕ')" value="ᕕ">
+                            </td>
+                            <td>vii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕆ')" value="ᕆ">
+                            </td>
+                            <td>rii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕿ')" value="ᕿ">
+                            </td>
+                            <td>qii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖏ')" value="ᖏ">
+                            </td>
+                            <td>ngii</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖕᖏ')" value="ᖕᖏ">
+                            </td>
+                            <td>nngii</td>
+                        </tr>
+                        <tr align="center">
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐄ')" value="ᐄ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐲ')" value="ᐲ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑏ')" value="ᑏ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑮ')" value="ᑮ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒌ')" value="ᒌ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒦ')" value="ᒦ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓃ')" value="ᓃ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓰ')" value="ᓰ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓖ')" value="ᓖ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔩ')" value="ᔩ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕖ')" value="ᕖ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕇ')" value="ᕇ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖀ')" value="ᖀ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖐ')" value="ᖐ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖕᖐ')" value="ᖕᖐ">
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td>u</td>
+                            <td></td>
+                            <td>pu</td>
+                            <td></td>
+                            <td>tu</td>
+                            <td></td>
+                            <td>ku</td>
+                            <td></td>
+                            <td>gu</td>
+                            <td></td>
+                            <td>mu</td>
+                            <td></td>
+                            <td>nu</td>
+                            <td></td>
+                            <td>su</td>
+                            <td></td>
+                            <td>lu</td>
+                            <td></td>
+                            <td>ju</td>
+                            <td></td>
+                            <td>vu</td>
+                            <td></td>
+                            <td>ru</td>
+                            <td></td>
+                            <td>qu</td>
+                            <td></td>
+                            <td>ngu</td>
+                            <td></td>
+                            <td>nngu</td>
+                            <td></td>
+                        </tr>
+                        <tr align="center">
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐅ')" value="ᐅ">
+                            </td>
+                            <td>uu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐳ')" value="ᐳ">
+                            </td>
+                            <td>puu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑐ')" value="ᑐ">
+                            </td>
+                            <td>tuu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑯ')" value="ᑯ">
+                            </td>
+                            <td>kuu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒍ')" value="ᒍ">
+                            </td>
+                            <td>guu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒧ')" value="ᒧ">
+                            </td>
+                            <td>muu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓄ')" value="ᓄ">
+                            </td>
+                            <td>nuu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓱ')" value="ᓱ">
+                            </td>
+                            <td>suu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓗ')" value="ᓗ">
+                            </td>
+                            <td>luu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔪ')" value="ᔪ">
+                            </td>
+                            <td>juu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕗ')" value="ᕗ">
+                            </td>
+                            <td>vuu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕈ')" value="ᕈ">
+                            </td>
+                            <td>ruu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖁ')" value="ᖁ">
+                            </td>
+                            <td>quu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖑ')" value="ᖑ">
+                            </td>
+                            <td>nguu</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖕᖑ')" value="ᖕᖑ">
+                            </td>
+                            <td>nnguu</td>
+                        </tr>
+                        <tr align="center">
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐆ')" value="ᐆ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐴ')" value="ᐴ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑑ')" value="ᑑ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑰ')" value="ᑰ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒎ')" value="ᒎ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒨ')" value="ᒨ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓅ')" value="ᓅ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓲ')" value="ᓲ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓘ')" value="ᓘ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔫ')" value="ᔫ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕘ')" value="ᕘ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕉ')" value="ᕉ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖂ')" value="ᖂ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖒ')" value="ᖒ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖕᖒ')" value="ᖕᖒ">
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td>a</td>
+                            <td></td>
+                            <td>pa</td>
+                            <td></td>
+                            <td>ta</td>
+                            <td></td>
+                            <td>ka</td>
+                            <td></td>
+                            <td>ga</td>
+                            <td></td>
+                            <td>ma</td>
+                            <td></td>
+                            <td>na</td>
+                            <td></td>
+                            <td>sa</td>
+                            <td></td>
+                            <td>la</td>
+                            <td></td>
+                            <td>ja</td>
+                            <td></td>
+                            <td>va</td>
+                            <td></td>
+                            <td>ra</td>
+                            <td></td>
+                            <td>qa</td>
+                            <td></td>
+                            <td>nga</td>
+                            <td></td>
+                            <td>nnga</td>
+                            <td></td>
+                        </tr>
+                        <tr align="center">
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐊ')" value="ᐊ">
+                            </td>
+                            <td>aa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐸ')" value="ᐸ">
+                            </td>
+                            <td>paa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑕ')" value="ᑕ">
+                            </td>
+                            <td>taa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑲ')" value="ᑲ">
+                            </td>
+                            <td>kaa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒐ')" value="ᒐ">
+                            </td>
+                            <td>gaa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒪ')" value="ᒪ">
+                            </td>
+                            <td>maa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓇ')" value="ᓇ">
+                            </td>
+                            <td>naa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓴ')" value="ᓴ">
+                            </td>
+                            <td>saa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓚ')" value="ᓚ">
+                            </td>
+                            <td>laa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔭ')" value="ᔭ">
+                            </td>
+                            <td>jaa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕙ')" value="ᕙ">
+                            </td>
+                            <td>vaa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕋ')" value="ᕋ">
+                            </td>
+                            <td>raa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖃ')" value="ᖃ">
+                            </td>
+                            <td>qaa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖓ')" value="ᖓ">
+                            </td>
+                            <td>ngaa</td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖕᖓ')" value="ᖕᖓ">
+                            </td>
+                            <td>nngaa</td>
+                        </tr>
+                        <tr align="center">
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐋ')" value="ᐋ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᐹ')" value="ᐹ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑖ')" value="ᑖ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᑳ')" value="ᑳ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒑ')" value="ᒑ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᒫ')" value="ᒫ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓈ')" value="ᓈ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓵ')" value="ᓵ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᓛ')" value="ᓛ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᔮ')" value="ᔮ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕚ')" value="ᕚ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᕌ')" value="ᕌ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖄ')" value="ᖄ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖔ')" value="ᖔ">
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="insertLetter('ᖕᖔ')" value="ᖕᖔ">
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="button" onclick="insertLetter('&#32;')" value="space">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('&#44;')" value="&#44;">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('&#46;')" value="&#46;">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('&#58;')" value="&#58;">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('&#34;')" value="&#34;">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('&#39;')" value="&#39;">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('&#40;')" value="&#40;">
+                            </td>
+                            <td>
+                                <input type="button" onclick="insertLetter('&#41;')" value="&#41;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="footer">
+        <div class="pure-g">
+            <div class="pure-u-1" style="background-color:#302c2d;">
+                <center>
+                    <font color="white"><a href="http://shiyu.fr">ShY&nbsp;&nbsp;&copy;&nbsp;&nbsp;http://shiyu.fr&nbsp;&nbsp;2018</font></a></center>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

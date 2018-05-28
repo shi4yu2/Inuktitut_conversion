@@ -1,0 +1,25 @@
+.footer { position: fixed; bottom: 0; width: 100%; }
+
+a {
+	text-decoration:none;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: white;
+}
