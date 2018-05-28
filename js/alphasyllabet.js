@@ -250,6 +250,8 @@ function toSyllabary() {
     txt = txt.replace(/v/gmi, "ᕝ");
     txt = txt.replace(/r/gmi, "ᕐ");
     txt = txt.replace(/q/gmi, "ᖅ");
+    txt = txt.replace(/nng/gmi, "ᖖ");
+    txt = txt.replace(/ng/gmi, "ᖕ");
 
     document.transformation.textinuk.value = txt;
 }
