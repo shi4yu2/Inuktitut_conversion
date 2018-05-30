@@ -7,5 +7,5 @@ Conversion between inuktitut syllabics and alphabet, with virtual syllabic keybo
 
 
 # ToDo
-
+- [ ] Reorganise virtual keyboard layout by grapheme frequency.
 - [ ] Simple voice synthesis for inuktitut words pronunciation.
